@@ -9,7 +9,7 @@ init();
 //************************************************************************************** */
 function init() {
   console.log('1.1 Function init will now pull data from samples.jason file.')
-  d3.json("static/data/samples.json").then(function (jsonData) {
+  d3.json("data/samples.json").then(function (jsonData) {
     let data = jsonData;
 
     //Capturing the id, which we will call names for the drop-down menu
@@ -31,7 +31,7 @@ function init() {
 
 function datapull(selectedID) {
   console.log('2.1 Function datapull will now pull all data from samples.jason file.')
-  d3.json("static/data/samples.json").then(function (jsonData) {
+  d3.json("data/samples.json").then(function (jsonData) {
     let data = jsonData;
 
     console.log('2.2 Now the function will filter through that data for selected ID: ' + selectedID + '.')
@@ -93,7 +93,7 @@ function buildMetaData(sample) {
   console.log('buildMetaData will now retrieve data for ' + sample + ' from the sample.json file.');
 
   //Use d3 to read json file
-  d3.json("static/data/samples.json").then((data) => {
+  d3.json("data/samples.json").then((data) => {
     var metadata = data.metadata;
 
     // Filter the data
